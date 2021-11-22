@@ -1,0 +1,15 @@
+extends header 
+block content 
+  h1 #{category.name}
+  each part in parts 
+    .part
+        img(src='https://bit.ly/31v8Yi9' alt='placeholder image')
+        a.part-details(href='/inventory/part/'+part._id)
+          h2 #{part.name}
+          h3 Part number #{part.part_number}
+          p
+            if part.in_stock > 0
+              | #{part.in_stock} available
+            else
+              | Not in stock
+        hr

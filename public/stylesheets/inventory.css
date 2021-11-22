@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+}
+.part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px 35px;
+  padding-left: 25px;
+  border: 1px solid black;
+}
+.part-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}

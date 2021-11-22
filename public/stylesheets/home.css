@@ -1,0 +1,16 @@
+body { 
+  text-align: center; 
+  margin: 90px auto; 
+} 
+h1 { 
+  font-size: 3rem; 
+  margin-bottom: 75px; 
+} 
+h2 { 
+  font-size: 1.6rem; 
+  margin-bottom: 400px; 
+}
+button { 
+  font-size: 1.3rem; 
+  padding: 8px; 
+}

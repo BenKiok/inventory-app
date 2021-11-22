@@ -1,0 +1,9 @@
+extends header 
+block content 
+  .container 
+    each category in allCategories 
+      .category
+        a(href='/inventory/categories/'+category.name)
+          h1 #{category.name}
+          if category.description
+            h2 #{category.description}

@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+head
+  title #{title}
+  meta(charset='UTC-8')
+  link(rel='stylesheet' href='/stylesheets/header.css')
+  link(rel='stylesheet' href='/stylesheets/inventory.css')
+body
+  .nav
+    nav
+      ul
+        li 
+          a(href='/inventory') Home
+        li 
+          a(href='/inventory/categories') Categories
+        li 
+          a(href='/inventory/makes&models') Makes and Models
+        li 
+          a(href='/') Log out
+  block content
+  footer
+    h3 @ 2021 Inventory Management

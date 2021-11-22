@@ -1,0 +1,16 @@
+extends header
+block content
+  img(src='https://bit.ly/31v8Yi9' alt='placeholder image')
+  h1 #{part.name}
+  h3
+    if part.description.length && part.description
+      =part.description 
+    else 
+      | This item has no description.
+  h3 
+    if part.in_stock
+      | #{part.in_stock} in stock
+    else
+      | Out of stock.
+  h4 Part number #{part.part_number}
+  button Buy now
