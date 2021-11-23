@@ -1,7 +1,23 @@
 var Make = require('../models/Make');
+var Model = require('../models/Model');
 
 exports.make_list = function(req, res) {
-  res.send('Error: no view for makes list');
+  Model.find({})
+  .populate('make')
+  .exec((err, models) => {
+    if (err) {
+      res.send(err);
+    } else {
+      Make.find({})
+      .exec((err, makes) => {
+        if (err) {
+          res.send(err);
+        } else {
+          res.render('make_list', { title: 'Makes and models', models, makes });
+        }
+      });
+    }
+  });
 }
 
 exports.new_make_get = function(req, res) {

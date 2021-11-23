@@ -13,16 +13,20 @@ exports.category_list = function(req, res) {
 }
 
 exports.category_detail = function(req, res) {
-  Category.find({ name: req.params.category })
+  Category.findOne({ name: req.params.category })
   .exec((err, category) => {
-    Part.find({ category: category._id })
-    .exec((err, parts) => {
-      if (err) {
-        res.send(err);
-      } else {
-        res.render('category_detail', { title: `${category.name}`, category, parts });
-      }
-    });
+    if (err) {
+      res.send(err);
+    } else {
+      Part.find({ category: category._id })
+      .exec((err, parts) => {
+        if (err) {
+          res.send(err);
+        } else {
+          res.render('category_detail', { title: category.name, category, parts });
+        }
+      });
+    }
   });
 }
 

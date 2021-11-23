@@ -1,0 +1,12 @@
+extends header
+block content
+  h1 All Makes
+  for make in makes
+    .make
+      h1 #{make.name}
+      ul
+        for model in models
+          if model.make.name === make.name 
+            li 
+              h2
+                a(href='/inventory/model/'+model.name) #{model.name}

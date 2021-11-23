@@ -138,16 +138,16 @@ function createModels(cb) {
         createModel('Corolla', makes[0], callback);
       },
       function(callback) {
-        createModel('CX5', makes[1], callback);
+        createModel('CX5', makes[2], callback);
       },
       function(callback) {
-        createModel('Mazda3', makes[1], callback);
+        createModel('Mazda3', makes[2], callback);
       },
       function(callback) {
-        createModel('Impreza', makes[2], callback);
+        createModel('Impreza', makes[1], callback);
       },
       function(callback) {
-        createModel('Legacy', makes[2], callback);
+        createModel('Legacy', makes[1], callback);
       }
     ],
     cb

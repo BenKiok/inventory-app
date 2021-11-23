@@ -1,9 +1,8 @@
 extends header
-block content
-  h1 All Parts
-  .container
-    each part in catalog
-      .part
+block content 
+  h1 #{model.make.name + ' ' + model.name + ' Parts'}
+  each part in parts 
+    .part
         img(src='https://bit.ly/31v8Yi9' alt='placeholder image')
         a.part-details(href='/inventory/part/'+part._id)
           h2 #{part.name}
@@ -13,4 +12,4 @@ block content
               | #{part.in_stock} available
             else
               | Not in stock
-        hr
+        hr 
